@@ -1,34 +1,152 @@
-# Database Management System (DBMS) Project
-## Food Manufacturing Inventory System
+# 🏭 Food Manufacturing Inventory Management System
 
-### Project Team
-- **Student 1**: Karan Shaunak Patel
+> A comprehensive Database Management System (DBMS) project implementing a real-world inventory management solution for food manufacturing companies.
 
-### Course Information
-- **Instructor**: Prof. Kemafor Ogan
-- **Course**: Database Management Systems
-- **Semester**: Fall 2025
-- **Date**: November 16, 2025
+## 📋 Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [System Architecture](#system-architecture)  
+- [Quick Start](#quick-start)
+- [User Roles](#user-roles)
+- [Database Schema](#database-schema)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
 
----
+## 🎯 Overview
 
-## Project Overview
+This project implements a production-ready inventory management system for food manufacturing companies with advanced features including:
 
-This project implements a comprehensive inventory management system for food manufacturing companies. The system provides:
+- **FEFO (First Expired, First Out)** inventory tracking
+- **Multi-level ingredient composition** (compound ingredients)
+- **Supplier relationship management** with versioned formulations
+- **Automated product batch creation** with ingredient consumption
+- **Regulatory compliance** through incompatible ingredient tracking
+- **Complete audit trail** for product recall traceability
+- **Role-based access control** with three distinct user types
 
--  **Ingredient Inventory Tracking** with FEFO (First Expired, First Out)
--  **Product Recipe Management** and versioning
--  **Supplier Relationship Management** with formulations
--  **Product Batch Creation** with automatic ingredient consumption
--  **Regulatory Compliance** (incompatible ingredient tracking)
--  **Product Recall Traceability**
--  **Role-based Access Control** (Manufacturer, Supplier, Viewer)
+**Course Information:**
+- **Instructor:** Prof. Kemafor Ogan
+- **Course:** Database Management Systems  
+- **Semester:** Fall 2025
 
----
+## ✨ Features
 
-## System Architecture
+### Core Functionality
+- ✅ **Ingredient Inventory Tracking** with expiration management
+- ✅ **Product Recipe Management** with versioning support
+- ✅ **Supplier Formulations** with pricing and effective date ranges
+- ✅ **Automated Batch Production** with real-time inventory updates
+- ✅ **Regulatory Compliance** via incompatible ingredient rules
+- ✅ **Cost Analysis & Reporting** across all operations
+- ✅ **Multi-role User Management** (Manufacturer/Supplier/Viewer)
 
-### Database Schema Overview
+### Advanced Database Features
+- **18 Tables** with comprehensive foreign key relationships
+- **3 Stored Procedures** for complex business logic automation
+- **5 Database Views** for optimized reporting and analytics  
+- **5 Triggers** implementing automatic business rules
+- **Check Constraints** ensuring data integrity at database level
+- **Compound Ingredients** supporting multi-level bill of materials
+
+## 🚀 Quick Start
+
+### Prerequisites
+- MySQL Server 8.0+ 
+- Python 3.8+
+- Git
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/food-manufacturing-inventory-system.git
+   cd food-manufacturing-inventory-system
+   ```
+
+2. **Set up the database**
+   ```bash
+   # Create and populate the database (use the enhanced version)
+   mysql -u root -p < DBMS_final/sql/QUICK_START.sql
+   ```
+
+3. **Configure database connection**
+   ```bash
+   # Copy the template and add your credentials
+   cp app/db_config_template.py app/db_config.py
+   # Edit app/db_config.py with your MySQL credentials
+   ```
+
+4. **Install Python dependencies**
+   ```bash
+   pip install -r app/requirements.txt
+   ```
+
+5. **Run the application**
+   ```bash
+   python -m app.main
+   ```
+
+### 🔐 Test Credentials
+| Role | Username | Password | Description |
+|------|----------|----------|-------------|
+| **Manufacturer** | `alice_mfg` | `password123` | Full production & inventory management |
+| **Supplier** | `bob_supplier` | `password123` | Ingredient supply & formulation management |
+| **Viewer** | `viewer_user` | `password123` | Read-only access to browse and analyze |
+
+## 👥 User Roles
+
+### 🏭 Manufacturer Role
+**Core Responsibilities:** Product development, recipe management, and production operations
+
+**Key Features:**
+- Create and manage product types and recipes
+- Execute production batches with automatic ingredient consumption
+- Monitor inventory levels and expiration dates  
+- Generate cost analysis and profitability reports
+- Access comprehensive dashboard with key metrics
+
+**Available Operations:**
+- Product Type & Recipe Management
+- Production Batch Creation (demonstrates stored procedure `sp_record_product_batch`)
+- Inventory Reports (On-hand, Nearly Out, Almost Expired)
+- Cost Analysis & Profitability Tracking
+
+### 🚚 Supplier Role  
+**Core Responsibilities:** Ingredient supply, formulation management, and inventory receiving
+
+**Key Features:**
+- Manage ingredient supply catalog and pricing
+- Create versioned formulations with material compositions
+- Receive ingredient batches with automated lot number generation
+- Monitor ingredient inventory and expiration tracking
+- Maintain compliance with incompatible ingredient rules
+
+**Available Operations:**
+- Ingredient Supply Management
+- Formulation Creation & Pricing
+- Ingredient Batch Receiving (demonstrates triggers for lot generation)
+- Inventory Tracking & Status Monitoring
+
+### 👁️ Viewer Role
+**Core Responsibilities:** Analysis, reporting, and regulatory oversight
+
+**Key Features:**
+- Browse all products and manufacturers (read-only)
+- Analyze product compositions and ingredient usage
+- Compare products for regulatory compliance 
+- Generate analytical reports across the system
+- Monitor system-wide inventory and production metrics
+
+**Available Operations:**
+- Product Browsing & Analysis  
+- Ingredient Composition Analysis
+- Product Incompatibility Checking (demonstrates `sp_compare_products`)
+- System-wide Reporting & Analytics
+
+## 🏗️ Database Schema
+
+### Core Entity Relationships
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -47,162 +165,117 @@ This project implements a comprehensive inventory management system for food man
 │ • pack_size     │    │ • on_hand_oz     │    │ • batch_size    │
 │ • effective_dt  │    │ • expiration     │    │ • category      │
 └─────────────────┘    └──────────────────┘    └─────────────────┘
-                                │                        │
-                                ▼                        ▼
-                       ┌──────────────────┐    ┌─────────────────┐
-                       │ STAGING_CONSUME  │    │ RECIPE_PLAN     │
-                       │                  │    │                 │
-                       │ • session_token  │    │ • ingredients   │
-                       │ • qty_oz         │    │ • quantities    │
-                       └──────────────────┘    └─────────────────┘
-                                │                        │
-                                └──────┬─────────────────┘
-                                       ▼
-                              ┌─────────────────┐
-                              │ PRODUCT_BATCH   │
-                              │                 │
-                              │ • lot_number    │
-                              │ • produced_units│
-                              │ • batch_cost    │
-                              └─────────────────┘
 ```
 
-### Key Technical Features
+### Key Database Objects
 
-- **Triggers** for automatic lot number generation and validation
-- **Stored Procedures** for complex business logic (sp_record_product_batch)
-- **Views** for data aggregation and reporting
-- **Foreign Key Constraints** ensuring data integrity
-- **Do-not-combine Rules** for regulatory compliance
+**📊 Tables (18 total)**
+- `ingredient` & `ingredient_material` - Multi-level ingredient composition
+- `supplier_formulation` - Versioned supplier pricing and recipes
+- `ingredient_batch` - FEFO inventory with lot tracking
+- `product_batch` - Production records with full traceability
+- `do_not_combine` - Regulatory compliance rules
+
+**⚙️ Stored Procedures (3 total)**
+- `sp_record_product_batch` - Automated production with inventory updates
+- `sp_compare_products` - Regulatory compliance checking
+- `sp_get_unit_cost` - Dynamic cost calculation
+
+**📈 Views (5 total)**  
+- `v_report_onhand` - Real-time inventory reporting
+- `v_nearly_out_of_stock` - Automated reorder alerts
+- `v_almost_expired` - Expiration management dashboard
+
+**🔧 Triggers (5 total)**
+- Auto-generation of lot numbers for traceability
+- Expiration date validation (90-day minimum)
+- Inventory level maintenance on consumption
+
+## 📁 Project Structure
+
+```
+├── 📄 README.md                    # Project documentation
+├── 🗃️  01_schema_and_logic.sql      # Core database schema (600 lines)
+├── 🗃️  02_seed_data.sql             # Sample data population  
+├── 🗂️  app/                        # Python CLI Application
+│   ├── 🐍 main.py                  # Application entry point
+│   ├── 🔐 auth.py                  # User authentication
+│   ├── 🗄️  db.py                   # Database connectivity
+│   ├── 📋 menus.py                 # Role-based menu system
+│   ├── 🏭 manufacturer_actions.py  # Manufacturer operations
+│   ├── 🚚 supplier_actions.py      # Supplier operations  
+│   ├── 👁️  viewer_actions.py        # Viewer operations
+│   └── 📦 requirements.txt         # Python dependencies
+├── 🗂️  DBMS_final/                 # Enhanced implementation
+│   ├── 📚 docs/                    # Comprehensive documentation
+│   ├── 🗃️  sql/                    # Enhanced SQL scripts
+│   └── 🧪 tests/                   # Testing framework
+└── 📊 Documentation & Diagrams     # ER diagrams and reports
+```
+
+## 🛠️ Technologies Used
+
+### Backend Database
+- **MySQL 8.0+** - Primary database engine
+- **SQL DDL/DML** - Schema definition and data manipulation  
+- **Stored Procedures** - Complex business logic implementation
+- **Triggers** - Automated business rule enforcement
+- **Views** - Optimized reporting and data presentation
+
+### Frontend Application  
+- **Python 3.8+** - Core application language
+- **mysql-connector-python** - Database connectivity
+- **tabulate** - Formatted data presentation
+- **python-dotenv** - Environment configuration management
+
+### Development & Deployment
+- **Git** - Version control
+- **GitHub** - Repository hosting and collaboration
+- **Modular Architecture** - Separation of concerns and maintainability
+
+## 🤝 Contributing
+
+### Setup for Development
+
+1. **Fork the repository** on GitHub
+2. **Clone your fork** locally
+3. **Create a feature branch**: `git checkout -b feature/amazing-feature`  
+4. **Make your changes** and test thoroughly
+5. **Commit your changes**: `git commit -m 'Add amazing feature'`
+6. **Push to your branch**: `git push origin feature/amazing-feature`
+7. **Open a Pull Request** with detailed description
+
+### Development Guidelines
+
+- Follow existing code style and structure
+- Add appropriate comments for complex logic
+- Test all database operations thoroughly  
+- Update documentation for any schema changes
+- Ensure security best practices (no hardcoded credentials)
+
+### Database Changes
+
+- Always test schema changes with sample data
+- Document any new triggers, procedures, or constraints
+- Maintain backwards compatibility when possible
+- Update seed data if new tables are added
 
 ---
 
-## Installation & Setup
+## 📄 License
 
-### Prerequisites
+This project is part of an academic coursework for Database Management Systems. Please respect academic integrity guidelines when referencing or building upon this work.
 
-1. **MySQL Server 8.0+** (or MariaDB 10.4+)
-2. **MySQL Workbench** (for DDL execution)
-3. **Python 3.8+**
-4. **Python packages**: `mysql-connector-python`, `tabulate`
+## 🙋‍♀️ Support
 
-### Step-by-Step Installation
-
-#### 1. Database Setup
-
-**a) Start MySQL Server**
-- Ensure MySQL is running on `localhost:3306`
-- Default credentials: `root`/[your-password]
-
-**b) Execute DDL in MySQL Workbench**
-- Open MySQL Workbench
-- Connect to your MySQL instance
-- Open file: `sql/01_schema_and_logic.sql`
-- Execute entire script (Ctrl+Shift+Enter)
-- Verify database `dbms_project` is created
-
-**c) Load Seed Data**
-- Open file: `sql/02_seed_data.sql`
-- Execute entire script (Ctrl+Shift+Enter)
-- Verify data is loaded: `SELECT COUNT(*) FROM ingredient_batch;`
-
-#### 2. Python Application Setup
-
-**a) Install Dependencies**
-```bash
-pip install mysql-connector-python tabulate
-```
-
-**b) Configure Database Connection**
-- Edit file: `app/db.py`
-- Update `DB_CONFIG` dictionary:
-```python
-DB_CONFIG = {
-    'host': 'localhost',
-    'port': 3306,
-    'user': 'root',
-    'password': '[YOUR_PASSWORD]',
-    'database': 'dbms_project'
-}
-```
-
-**c) Test Database Connection**
-```bash
-python app/db.py
-```
-Expected output: "Connection test passed"
-
-#### 3. Application Execution
-
-**a) Start the Application**
-```bash
-python -m app.main
-```
-
-**b) Login with Test Accounts**
-
-| Role | Username | Password | Capabilities |
-|------|----------|----------|--------------|
-| **Manufacturer** | `jsmith` | `password123` | Product management, batch creation, FEFO |
-| **Supplier** | `jdoe` | `password123` | Ingredient supply, formulations, batches |
-| **Viewer** | `bjohnson` | `password123` | Read-only browsing, reporting |
+For questions about this project:
+- Check the comprehensive documentation in `/DBMS_final/docs/`
+- Review the testing guide in `/DBMS_final/TESTING_GUIDE.md`
+- Examine the implementation roadmap for feature details
 
 ---
 
-## Using the System
-
-### Quick Verification Tests
-
-#### 1. Manufacturer Workflow
-- Login as `jsmith`/`password123`
-- **View My Product Types** → Should see "Steak Dinner"
-- **Create Product Batch** → Use Recipe Plan ID: 1, Choose FEFO auto-selection
-- **Reports Menu** → View inventory and costs
-
-#### 2. Supplier Workflow  
-- Login as `jdoe`/`password123`
-- **View My Ingredients** → Should see Salt, Pepper, Beef Steak, etc.
-- **Receive Ingredient Batch** → Add new inventory lot
-- **View Do-Not-Combine Rules** → See regulatory restrictions
-
-#### 3. Viewer Workflow
-- Login as `bjohnson`/`password123`
-- **Browse All Products** → See system-wide product catalog
-- **Compare Products for Incompatibility** → Test regulatory compliance
-- **View Health Risk Violations** → Monitor expired inventory
-
----
-
-## 📁 File Structure
-
-```
-DBMS_final/
-├── README.md                           ← This file
-├── 01_schema_and_logic_fixed.sql  ← Complete DDL with triggers/procedures
-├── 02_seed_data.sql               ← Sample data for testing
-└── app/                                ← Python application
-    ├── main.py                         ← Application entry point
-    ├── requirements.txt                    ← Python dependencies
-    ├── auth.py                         ← Authentication logic
-    ├── db.py                           ← Database connection utilities
-    ├── menus.py                        ← Role-based menu systems
-    ├── manufacturer_actions.py         ← Manufacturer functionality
-    ├── supplier_actions.py             ← Supplier functionality
-    └── viewer_actions.py               ← Viewer functionality
-```
----
-
-## Graduate Features Implemented
-
-### 1. FEFO (First Expired, First Out) Inventory Management
-- Automatic selection of ingredient lots based on expiration dates
-- Session token isolation for staging consumption
-- Minimizes food waste through intelligent lot selection
-
-### 2. Product Recall Traceability
-- Complete supply chain tracking via `sp_trace_recall` procedure
-- Trace any product batch to all ingredient lots used
-- Critical for food safety and regulatory compliance
+**⭐ If you found this project helpful, please consider giving it a star!**
 
 ### 3. Advanced Reporting & Analytics
 - Real-time inventory monitoring with consumption tracking
