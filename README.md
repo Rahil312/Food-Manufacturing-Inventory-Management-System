@@ -2,21 +2,25 @@
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Rahil312/Food-Manufacturing-Inventory-Management-System)
-![GitHub license](https://img.shields.io/github/license/Rahil312/Food-Manufacturing-Inventory-Management-System)
-
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![CLI](https://img.shields.io/badge/CLI-Terminal%20Interface-black?style=for-the-badge&logo=windows-terminal&logoColor=white)
+
+[![GitHub Stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System)
+[![GitHub Forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/fork)
+[![GitHub Issues](https://img.shields.io/github/issues/Rahil312/Food-Manufacturing-Inventory-Management-System)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues)
+[![License](https://img.shields.io/badge/License-Academic%20Use-blue.svg)](https://opensource.org/licenses/MIT)
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/Rahil312)
+
+> *Advancing Food Manufacturing Through Advanced Database Management*
 
 **A Production-Ready Database Management System for Food Manufacturing**
 
-*Implementing advanced DBMS concepts with real-world business logic*
+*Implementing sophisticated DBMS concepts with real-world business logic and enterprise-grade features*
 
-[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-user-roles) • [🏗️ Architecture](#️-database-schema) • [🤝 Contributing](#-contributing)
+[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-user-roles) • [🏗️ Architecture](#️-database-schema) • [🤝 Contributing](#-contributing) • [📞 Contact](#-connect--support)
 
 </div>
 
@@ -251,6 +255,26 @@ python -m app.main
 - Expiration date validation (90-day minimum)
 - Inventory level maintenance on consumption
 
+<div align="center">
+
+### 🏆 **System Performance Metrics**
+
+![Database Tables](https://img.shields.io/badge/Tables-18-brightgreen?style=for-the-badge)
+![Stored Procedures](https://img.shields.io/badge/Procedures-3-blue?style=for-the-badge)
+![Views](https://img.shields.io/badge/Views-5-orange?style=for-the-badge)
+![Triggers](https://img.shields.io/badge/Triggers-5-red?style=for-the-badge)
+![User Roles](https://img.shields.io/badge/Roles-3-purple?style=for-the-badge)
+
+| 📊 **Component** | 🔢 **Count** | ⚡ **Performance** | 🎯 **Purpose** |
+|:---:|:---:|:---:|:---|
+| **📋 Database Tables** | 18 | Optimized Schema | Complete data normalization |
+| **⚙️ Stored Procedures** | 3 | High Performance | Complex business logic |
+| **📈 Database Views** | 5 | Fast Queries | Real-time reporting |
+| **🔧 Automated Triggers** | 5 | Instant Response | Business rule enforcement |
+| **👤 User Role Types** | 3 | Secure Access | Role-based permissions |
+
+</div>
+
 ## 📁 Project Structure
 
 ```
@@ -434,69 +458,104 @@ git push origin feature/amazing-new-feature
 
 ---
 
-## 📞 Contact
+## 📞 Connect & Support
 
 <div align="center">
 
-### 👨‍💻 **Project Developer**
+[![GitHub Profile](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/Rahil312)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rahil-shukla-bb8184204/)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail)](mailto:rshukla7@ncsu.edu)
 
-**Rahil Shukla**
+### 👨‍💻 **Developer Information**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rahil312)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rahil-shukla)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rshukla7@ncsu.edu)
+**Rahil Shukla**  
+🎓 *Graduate Student in Computer Science*  
+🏫 *North Carolina State University*
 
-**🎓 Academic Information:**
-- **Institution:** North Carolina State University
-- **Program:** Computer Science Graduate Program
+**📚 Academic Details:**
 - **Course:** CSC540 - Database Management Systems
+- **Instructor:** Prof. Kemafor Ogan
 - **Semester:** Fall 2025
+- **Program:** Computer Science Graduate Program
 
 </div>
 
-### 📬 **Get in Touch**
+### 💬 **Get Help & Support**
 
-**💬 For Questions About This Project:**
-- 📚 Check the comprehensive documentation in [`/DBMS_final/docs/`](./DBMS_final/docs/)
-- 🧪 Review the testing guide in [`/DBMS_final/TESTING_GUIDE.md`](./DBMS_final/TESTING_GUIDE.md)
-- 📋 Examine the implementation roadmap for detailed feature specifications
-- 🐛 Open an [Issue](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues) for bug reports or feature requests
+<div align="center">
 
-**🤝 For Collaboration Opportunities:**
-- 💼 **Industry Professionals** - Discussion about real-world database implementations
-- 🎓 **Academic Researchers** - Collaboration on advanced DBMS concepts and optimizations  
-- 👨‍💻 **Fellow Developers** - Code review, architectural improvements, or feature extensions
-- 🏢 **Employers** - Technical discussions about database design and development skills
+| 📋 **Type** | 🔗 **Resource** | 📝 **Description** |
+|:---:|:---:|:---|
+| 🐛 **Bug Reports** | [Create an Issue](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues) | Found a bug? Let us know! |
+| 💡 **Feature Requests** | [Start a Discussion](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/discussions) | Ideas for improvements |
+| 📚 **Documentation** | [Check Wiki](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/wiki) | Comprehensive guides |
+| ❓ **Questions** | [Review Docs](./DBMS_final/docs/) | Technical documentation |
 
-**📧 Direct Contact:**
-- **Primary Email:** [rshukla7@ncsu.edu](mailto:rshukla7@ncsu.edu)
-- **Response Time:** Within 24-48 hours for technical inquiries
-- **Best for:** Project-specific questions, collaboration proposals, technical discussions
+</div>
+
+### 📧 **Direct Contact**
+- **🏫 Academic Email:** [rshukla7@ncsu.edu](mailto:rshukla7@ncsu.edu)
+- **💼 Professional Email:** [rahilshukla3122@gmail.com](mailto:rahilshukla3122@gmail.com)
+- **⏰ Response Time:** Within 24-48 hours for technical inquiries
+- **🎯 Best for:** Project discussions, collaboration opportunities, technical questions
+
+### 🤝 **Collaboration Opportunities**
+- **💼 Industry Professionals** - Real-world database implementation discussions
+- **🎓 Academic Researchers** - Advanced DBMS concepts and optimizations  
+- **👨‍💻 Fellow Developers** - Code review and architectural improvements
+- **🏢 Employers** - Technical skills demonstration and project walkthroughs
+
+---
+
+## 📄 License & Citation
+
+<div align="center">
+
+[![MIT License](https://img.shields.io/badge/License-Academic%20Use-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Academic Integrity](https://img.shields.io/badge/Academic-Integrity%20Required-blue?style=for-the-badge)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System)
+
+</div>
+
+### 📝 **Citation Format**
+```bibtex
+@misc{food_manufacturing_inventory_2025,
+  title={Food Manufacturing Inventory Management System: A Comprehensive DBMS Implementation},
+  author={Rahil Shukla},
+  year={2025},
+  course={CSC540 - Database Management Systems},
+  instructor={Prof. Kemafor Ogan},
+  university={North Carolina State University},
+  url={https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System},
+  note={Academic Project - Database Management Systems}
+}
+```
+
+### ⚖️ **Academic Integrity Notice**
+This project is part of academic coursework for Database Management Systems (CSC540). Please respect academic integrity guidelines when referencing or building upon this work.
 
 ---
 
 <div align="center">
 
-## 📄 **License & Academic Integrity**
+## ⭐ **Show Your Support**
 
-![License](https://img.shields.io/badge/License-Academic%20Use-blue?style=for-the-badge)
-
-This project is part of academic coursework for Database Management Systems (CSC540). 
-
-**Please respect academic integrity guidelines when referencing or building upon this work.**
-
----
-
-### ⭐ **Show Your Support**
-
-**If you found this project helpful or impressive, please consider:**
+**If this project impressed you or helped with your learning:**
 
 [![GitHub stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/watchers)
 
-**🌟 Starring the repository** • **🍴 Forking for your own projects** • **🐛 Reporting issues** • **💡 Suggesting improvements**
+**🌟 Star the repository** • **🍴 Fork for your projects** • **👀 Watch for updates** • **🐛 Report issues** • **💡 Suggest improvements**
 
 *Your support helps demonstrate the real-world impact of academic database projects!*
+
+---
+
+**🏭 Building the Future of Food Manufacturing Through Database Excellence 🗄️**
+
+*Crafted with ❤️ for advanced DBMS education and real-world applications*
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=Rahil312%2FFood-Manufacturing-Inventory-Management-System&label=Visitors&countColor=%23263759)
 
 </div>
 
