@@ -11,7 +11,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System)
 [![GitHub Forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/fork)
 [![GitHub Issues](https://img.shields.io/github/issues/Rahil312/Food-Manufacturing-Inventory-Management-System)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues)
-[![License](https://img.shields.io/badge/License-Academic%20Use-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/Rahil312)
 
 > *Advancing Food Manufacturing Through Advanced Database Management*
@@ -478,12 +478,6 @@ git push origin feature/amazing-new-feature
 🎓 *Graduate Student in Computer Science*  
 🏫 *North Carolina State University*
 
-**📚 Academic Details:**
-- **Course:** CSC540 - Database Management Systems
-- **Instructor:** Prof. Kemafor Ogan
-- **Semester:** Fall 2025
-- **Program:** Computer Science Graduate Program
-
 </div>
 
 ### 💬 **Get Help & Support**
@@ -513,31 +507,16 @@ git push origin feature/amazing-new-feature
 
 ---
 
-## 📄 License & Citation
+## 📄 License
 
 <div align="center">
 
-[![MIT License](https://img.shields.io/badge/License-Academic%20Use-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Academic Integrity](https://img.shields.io/badge/Academic-Integrity%20Required-blue?style=for-the-badge)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Open Source](https://img.shields.io/badge/Open%20Source-💚-brightgreen?style=for-the-badge)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System)
 
 </div>
 
-### 📝 **Citation Format**
-```bibtex
-@misc{food_manufacturing_inventory_2025,
-  title={Food Manufacturing Inventory Management System: A Comprehensive DBMS Implementation},
-  author={Rahil Shukla},
-  year={2025},
-  course={CSC540 - Database Management Systems},
-  instructor={Prof. Kemafor Ogan},
-  university={North Carolina State University},
-  url={https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System},
-  note={Academic Project - Database Management Systems}
-}
-```
-
-### ⚖️ **Academic Integrity Notice**
-This project is part of academic coursework for Database Management Systems (CSC540). Please respect academic integrity guidelines when referencing or building upon this work.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -553,7 +532,7 @@ This project is part of academic coursework for Database Management Systems (CSC
 
 **🌟 Star the repository** • **🍴 Fork for your projects** • **👀 Watch for updates** • **🐛 Report issues** • **💡 Suggest improvements**
 
-*Your support helps demonstrate the real-world impact of academic database projects!*
+*Your support helps demonstrate the real-world impact of database projects!*
 
 ---
 
@@ -561,36 +540,26 @@ This project is part of academic coursework for Database Management Systems (CSC
 
 *Crafted with ❤️ for advanced DBMS education and real-world applications*
 
+### 🎯 **Technical Achievements Demonstrated:**
+
+**🗄️ Database Design Excellence:**
+- **Relational Database Design** principles with proper normalization
+- **Transaction Management** and ACID properties implementation  
+- **Stored Procedures** and trigger programming for business logic
+- **Multi-user Role-based** access control with secure authentication
+
+**⚡ Advanced Implementation:**
+- **Business Logic Implementation** at the database layer for performance
+- **Application Development** with seamless database integration
+- **Real-time Inventory Monitoring** with consumption tracking
+- **Regulatory Compliance System** with automated validation
+
+**📊 Production-Ready Features:**
+- **Cost Analysis** with unit-level breakdown and profitability tracking
+- **Health Risk Detection** for expired inventory and safety compliance
+- **Do-not-combine Rules** enforcement during product batch creation
+- **Product Incompatibility Analysis** for regulatory adherence
+
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=Rahil312%2FFood-Manufacturing-Inventory-Management-System&label=Visitors&countColor=%23263759)
 
 </div>
-
-### 3. Advanced Reporting & Analytics
-- Real-time inventory monitoring with consumption tracking
-- Cost analysis with unit-level breakdown
-- Health risk violation detection for expired inventory
-
-### 4. Regulatory Compliance System
-- Do-not-combine ingredient rules enforcement
-- Automatic validation during product batch creation
-- Product incompatibility analysis
-
-
----
-
-## Academic Integrity
-
-This project was developed as original work for **Database Management Systems** under the supervision of the course instructor. All code, database design, and documentation represent the collaborative effort of the team members listed above.
-
----
-
-## The system demonstrates practical application of:
-
-- **Relational Database Design** principles
-- **Transaction Management** and ACID properties  
-- **Stored Procedures** and trigger programming
-- **Multi-user Role-based** access control
-- **Business Logic Implementation** in database layer
-- **Application Development** with database integration
-
----
