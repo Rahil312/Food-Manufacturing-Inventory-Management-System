@@ -107,8 +107,9 @@ This project demonstrates sophisticated database design and implementation skill
 git clone https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System.git
 cd Food-Manufacturing-Inventory-Management-System
 
-# 🗄️ 2. Set up the database (Enhanced version recommended)
-mysql -u root -p < DBMS_final/sql/QUICK_START.sql
+# 🗄️ 2. Set up the database
+mysql -u root -p < 01_schema_and_logic.sql
+mysql -u root -p < 02_seed_data.sql
 
 # 🔐 3. Configure database connection
 cp app/db_config_template.py app/db_config.py
@@ -278,23 +279,28 @@ python -m app.main
 ## 📁 Project Structure
 
 ```
-├── 📄 README.md                    # Project documentation
-├── 🗃️  01_schema_and_logic.sql      # Core database schema (600 lines)
+├── 📄 README.md                    # Comprehensive project documentation
+├── 🗃️  01_schema_and_logic.sql      # Complete database schema (600 lines)
 ├── 🗃️  02_seed_data.sql             # Sample data population  
+├── 📊 Normalization_Table.pdf      # Database normalization analysis
+├── 📋 DBMS_Project_Final_Report.pdf # Complete project report
+├── 🖼️  Final_ER.png                 # Entity Relationship diagram
+├── 📄 Final_ER_Diagram.pdf         # Detailed ER documentation
 ├── 🗂️  app/                        # Python CLI Application
 │   ├── 🐍 main.py                  # Application entry point
-│   ├── 🔐 auth.py                  # User authentication
-│   ├── 🗄️  db.py                   # Database connectivity
+│   ├── 🔐 auth.py                  # User authentication system
+│   ├── 🗄️  db.py                   # Database connectivity layer
+│   ├── 🔧 db_config_template.py    # Database configuration template
 │   ├── 📋 menus.py                 # Role-based menu system
 │   ├── 🏭 manufacturer_actions.py  # Manufacturer operations
 │   ├── 🚚 supplier_actions.py      # Supplier operations  
 │   ├── 👁️  viewer_actions.py        # Viewer operations
+│   ├── 🔍 queries.py               # Database query utilities
+│   ├── 🧪 test_queries.py          # Query testing framework
+│   ├── 📊 check_all_tables.py      # Database verification
+│   ├── 🗑️  clear_data.py            # Data cleanup utilities
 │   └── 📦 requirements.txt         # Python dependencies
-├── 🗂️  DBMS_final/                 # Enhanced implementation
-│   ├── 📚 docs/                    # Comprehensive documentation
-│   ├── 🗃️  sql/                    # Enhanced SQL scripts
-│   └── 🧪 tests/                   # Testing framework
-└── 📊 Documentation & Diagrams     # ER diagrams and reports
+└── 📊 Additional Documentation     # ER diagrams and project reports
 ```
 
 ## 🛠️ Technologies Used
@@ -344,7 +350,7 @@ python -m app.main
 
 </div>
 
-This project follows a comprehensive implementation strategy based on the **CSC540 Part 2 Implementation Plan**, ensuring a robust and scalable database application:
+This project follows a comprehensive implementation strategy ensuring a robust and scalable database application:
 
 ### 🏗️ **Database Layer Implementation**
 
@@ -489,7 +495,7 @@ git push origin feature/amazing-new-feature
 | 🐛 **Bug Reports** | [Create an Issue](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues) | Found a bug? Let us know! |
 | 💡 **Feature Requests** | [Start a Discussion](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/discussions) | Ideas for improvements |
 | 📚 **Documentation** | [Check Wiki](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/wiki) | Comprehensive guides |
-| ❓ **Questions** | [Review Docs](./DBMS_final/docs/) | Technical documentation |
+| ❓ **Questions** | [Review Documentation](./README.md) | Complete project guide |
 
 </div>
 
