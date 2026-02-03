@@ -1,148 +1,208 @@
 # 🏭 Food Manufacturing Inventory Management System
 
-> A comprehensive Database Management System (DBMS) project implementing a real-world inventory management solution for food manufacturing companies.
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Rahil312/Food-Manufacturing-Inventory-Management-System)
+![GitHub license](https://img.shields.io/github/license/Rahil312/Food-Manufacturing-Inventory-Management-System)
+
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+**A Production-Ready Database Management System for Food Manufacturing**
+
+*Implementing advanced DBMS concepts with real-world business logic*
+
+[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-user-roles) • [🏗️ Architecture](#️-database-schema) • [🤝 Contributing](#-contributing)
+
+</div>
+
+---
 
 ## 📋 Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [System Architecture](#system-architecture)  
-- [Quick Start](#quick-start)
-- [User Roles](#user-roles)
-- [Database Schema](#database-schema)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
+- [🎯 Overview](#-overview)
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [👥 User Roles](#-user-roles)
+- [🏗️ Database Schema](#️-database-schema)
+- [📁 Project Structure](#-project-structure)
+- [🛠️ Technologies Used](#️-technologies-used)
+- [📚 Implementation Plan](#-implementation-plan)
+- [🤝 Contributing](#-contributing)
+- [📞 Contact](#-contact)
 
 ## 🎯 Overview
 
-This project implements a production-ready inventory management system for food manufacturing companies with advanced features including:
+> A comprehensive Database Management System (DBMS) project implementing a real-world inventory management solution for food manufacturing companies with advanced features including FEFO inventory tracking, multi-level ingredient composition, and automated compliance checking.
 
-- **FEFO (First Expired, First Out)** inventory tracking
-- **Multi-level ingredient composition** (compound ingredients)
-- **Supplier relationship management** with versioned formulations
-- **Automated product batch creation** with ingredient consumption
-- **Regulatory compliance** through incompatible ingredient tracking
-- **Complete audit trail** for product recall traceability
-- **Role-based access control** with three distinct user types
+This project demonstrates sophisticated database design and implementation skills through:
 
-**Course Information:**
-- **Instructor:** Prof. Kemafor Ogan
-- **Course:** Database Management Systems  
+- **🔄 FEFO (First Expired, First Out)** inventory tracking with automated lot selection
+- **🧪 Multi-level ingredient composition** supporting compound ingredients  
+- **📊 Supplier relationship management** with versioned formulations and pricing
+- **⚡ Automated product batch creation** with real-time inventory consumption
+- **🛡️ Regulatory compliance** through incompatible ingredient tracking and validation
+- **📈 Complete audit trail** enabling rapid product recall traceability
+- **👤 Role-based access control** with three distinct user privilege levels
+
+**📚 Academic Information:**
+- **Course:** Database Management Systems (CSC540)
+- **Instructor:** Prof. Kemafor Ogan  
 - **Semester:** Fall 2025
+- **Implementation:** MySQL Backend + Python CLI Frontend
 
 ## ✨ Features
 
-### Core Functionality
-- ✅ **Ingredient Inventory Tracking** with expiration management
-- ✅ **Product Recipe Management** with versioning support
-- ✅ **Supplier Formulations** with pricing and effective date ranges
-- ✅ **Automated Batch Production** with real-time inventory updates
-- ✅ **Regulatory Compliance** via incompatible ingredient rules
-- ✅ **Cost Analysis & Reporting** across all operations
-- ✅ **Multi-role User Management** (Manufacturer/Supplier/Viewer)
+<div align="center">
 
-### Advanced Database Features
-- **18 Tables** with comprehensive foreign key relationships
-- **3 Stored Procedures** for complex business logic automation
-- **5 Database Views** for optimized reporting and analytics  
-- **5 Triggers** implementing automatic business rules
-- **Check Constraints** ensuring data integrity at database level
-- **Compound Ingredients** supporting multi-level bill of materials
+| 🏭 **Manufacturing** | 🚚 **Supply Chain** | 👁️ **Analytics** | 🛡️ **Compliance** |
+|:---:|:---:|:---:|:---:|
+| Product Recipe Management | Supplier Formulations | Real-time Reporting | Incompatible Ingredients |
+| Batch Production Control | Versioned Pricing | Cost Analysis | Regulatory Compliance |
+| Inventory Consumption | Multi-level BOM | Expiration Monitoring | Audit Trail |
+| FEFO Lot Selection | Automated Receiving | System-wide Metrics | Recall Traceability |
+
+</div>
+
+### 🎯 Core Functionality
+- ✅ **Advanced Inventory Tracking** with FEFO (First Expired, First Out) policy enforcement
+- ✅ **Intelligent Recipe Management** supporting multi-level ingredient compositions  
+- ✅ **Dynamic Supplier Formulations** with time-based pricing and effective date ranges
+- ✅ **Automated Production Workflows** with real-time inventory updates and consumption tracking
+- ✅ **Regulatory Compliance Engine** preventing unsafe ingredient combinations at database level
+- ✅ **Comprehensive Cost Analytics** with unit cost calculations and profitability analysis
+- ✅ **Enterprise-Grade Access Control** supporting Manufacturer, Supplier, and Viewer roles
+
+### 🚀 Advanced Database Features
+- **📊 18 Normalized Tables** with comprehensive foreign key relationships and data integrity
+- **⚙️ 3 Stored Procedures** implementing complex transactional business logic
+- **📈 5 Optimized Views** providing real-time reporting and analytics capabilities  
+- **🔧 5 Database Triggers** enforcing automatic business rules and data validation
+- **🛡️ Advanced Constraints** ensuring data quality through check constraints and unique indexes
+- **🔄 Compound Ingredients** enabling sophisticated bill-of-materials hierarchies
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- MySQL Server 8.0+ 
-- Python 3.8+
-- Git
+<div align="center">
 
-### Installation
+### 🔧 Prerequisites
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/food-manufacturing-inventory-system.git
-   cd food-manufacturing-inventory-system
-   ```
+![MySQL](https://img.shields.io/badge/MySQL-8.0+-blue?logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.8+-green?logo=python&logoColor=white)
+![Git](https://img.shields.io/badge/Git-Latest-red?logo=git&logoColor=white)
 
-2. **Set up the database**
-   ```bash
-   # Create and populate the database (use the enhanced version)
-   mysql -u root -p < DBMS_final/sql/QUICK_START.sql
-   ```
+</div>
 
-3. **Configure database connection**
-   ```bash
-   # Copy the template and add your credentials
-   cp app/db_config_template.py app/db_config.py
-   # Edit app/db_config.py with your MySQL credentials
-   ```
+### ⚡ Installation
 
-4. **Install Python dependencies**
-   ```bash
-   pip install -r app/requirements.txt
-   ```
+```bash
+# 📥 1. Clone the repository
+git clone https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System.git
+cd Food-Manufacturing-Inventory-Management-System
 
-5. **Run the application**
-   ```bash
-   python -m app.main
-   ```
+# 🗄️ 2. Set up the database (Enhanced version recommended)
+mysql -u root -p < DBMS_final/sql/QUICK_START.sql
 
-### 🔐 Test Credentials
-| Role | Username | Password | Description |
-|------|----------|----------|-------------|
-| **Manufacturer** | `alice_mfg` | `password123` | Full production & inventory management |
-| **Supplier** | `bob_supplier` | `password123` | Ingredient supply & formulation management |
-| **Viewer** | `viewer_user` | `password123` | Read-only access to browse and analyze |
+# 🔐 3. Configure database connection
+cp app/db_config_template.py app/db_config.py
+# Edit app/db_config.py with your MySQL credentials
+
+# 📦 4. Install Python dependencies
+pip install -r app/requirements.txt
+
+# 🚀 5. Launch the application
+python -m app.main
+```
+
+### 🔐 Demo Credentials
+
+<div align="center">
+
+| 👤 **Role** | 🔑 **Username** | 🗝️ **Password** | 📋 **Capabilities** |
+|:---:|:---:|:---:|:---|
+| **🏭 Manufacturer** | `alice_mfg` | `password123` | Full production & inventory management |
+| **🚚 Supplier** | `bob_supplier` | `password123` | Ingredient supply & formulation management |
+| **👁️ Viewer** | `viewer_user` | `password123` | Read-only access to browse and analyze |
+
+</div>
 
 ## 👥 User Roles
 
-### 🏭 Manufacturer Role
+<div align="center">
+
+### 🏭 **Manufacturer Role**
+![Manufacturer](https://img.shields.io/badge/ACCESS-FULL%20CONTROL-success?style=for-the-badge)
+
+</div>
+
 **Core Responsibilities:** Product development, recipe management, and production operations
 
-**Key Features:**
-- Create and manage product types and recipes
-- Execute production batches with automatic ingredient consumption
-- Monitor inventory levels and expiration dates  
-- Generate cost analysis and profitability reports
-- Access comprehensive dashboard with key metrics
+**🎯 Key Features:**
+- Create and manage product types with standardized batch specifications
+- Design versioned recipe plans with multi-level ingredient compositions  
+- Execute production batches with automatic FEFO ingredient consumption
+- Monitor real-time inventory levels and expiration date management
+- Generate comprehensive cost analysis and profitability reports
+- Access enterprise dashboard with key performance metrics
 
-**Available Operations:**
-- Product Type & Recipe Management
-- Production Batch Creation (demonstrates stored procedure `sp_record_product_batch`)
-- Inventory Reports (On-hand, Nearly Out, Almost Expired)
-- Cost Analysis & Profitability Tracking
+**⚙️ Available Operations:**
+- **📋 Product Type & Recipe Management** - Create and version product specifications
+- **🏭 Production Batch Creation** - Demonstrates `sp_record_product_batch` stored procedure
+- **📊 Advanced Inventory Reports** - On-hand, Nearly Out, Almost Expired via database views
+- **💰 Cost Analysis & Profitability** - Unit cost tracking and variance analysis
 
-### 🚚 Supplier Role  
+---
+
+<div align="center">
+
+### 🚚 **Supplier Role**  
+![Supplier](https://img.shields.io/badge/ACCESS-SUPPLY%20CHAIN-blue?style=for-the-badge)
+
+</div>
+
 **Core Responsibilities:** Ingredient supply, formulation management, and inventory receiving
 
-**Key Features:**
-- Manage ingredient supply catalog and pricing
-- Create versioned formulations with material compositions
-- Receive ingredient batches with automated lot number generation
-- Monitor ingredient inventory and expiration tracking
-- Maintain compliance with incompatible ingredient rules
+**🎯 Key Features:**
+- Manage comprehensive ingredient supply catalog with dynamic pricing
+- Create versioned formulations with detailed material compositions
+- Receive ingredient batches with automated lot number generation via triggers
+- Monitor ingredient inventory levels with expiration tracking and alerts
+- Maintain regulatory compliance with incompatible ingredient rule management
+- Track supplier performance metrics and delivery schedules
 
-**Available Operations:**
-- Ingredient Supply Management
-- Formulation Creation & Pricing
-- Ingredient Batch Receiving (demonstrates triggers for lot generation)
-- Inventory Tracking & Status Monitoring
+**⚙️ Available Operations:**
+- **📦 Ingredient Supply Management** - Maintain supply catalog and availability
+- **🧪 Formulation Creation & Pricing** - Version-controlled recipes with effective dates
+- **📥 Ingredient Batch Receiving** - Demonstrates triggers for automated lot generation  
+- **📈 Inventory Tracking & Status** - Real-time monitoring with status indicators
 
-### 👁️ Viewer Role
+---
+
+<div align="center">
+
+### 👁️ **Viewer Role**
+![Viewer](https://img.shields.io/badge/ACCESS-READ%20ONLY-orange?style=for-the-badge)
+
+</div>
+
 **Core Responsibilities:** Analysis, reporting, and regulatory oversight
 
-**Key Features:**
-- Browse all products and manufacturers (read-only)
-- Analyze product compositions and ingredient usage
-- Compare products for regulatory compliance 
-- Generate analytical reports across the system
-- Monitor system-wide inventory and production metrics
+**🎯 Key Features:**
+- Browse comprehensive product catalog across all manufacturers (read-only access)
+- Analyze detailed product compositions and ingredient usage patterns
+- Compare products for regulatory compliance and safety verification
+- Generate analytical reports across entire system ecosystem
+- Monitor system-wide inventory metrics and production performance
+- Access regulatory compliance dashboards and violation tracking
 
-**Available Operations:**
-- Product Browsing & Analysis  
-- Ingredient Composition Analysis
-- Product Incompatibility Checking (demonstrates `sp_compare_products`)
-- System-wide Reporting & Analytics
+**⚙️ Available Operations:**
+- **🔍 Product Browsing & Analysis** - System-wide product catalog exploration  
+- **🧬 Ingredient Composition Analysis** - Detailed bill-of-materials breakdown
+- **⚖️ Product Incompatibility Checking** - Demonstrates `sp_compare_products` procedure
+- **📊 System-wide Reporting & Analytics** - Cross-manufacturer performance metrics
 
 ## 🏗️ Database Schema
 
@@ -215,67 +275,230 @@ This project implements a production-ready inventory management system for food 
 
 ## 🛠️ Technologies Used
 
+<div align="center">
+
 ### Backend Database
-- **MySQL 8.0+** - Primary database engine
-- **SQL DDL/DML** - Schema definition and data manipulation  
-- **Stored Procedures** - Complex business logic implementation
-- **Triggers** - Automated business rule enforcement
-- **Views** - Optimized reporting and data presentation
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-DDL%2FDML-lightgrey?style=for-the-badge)
 
 ### Frontend Application  
-- **Python 3.8+** - Core application language
-- **mysql-connector-python** - Database connectivity
-- **tabulate** - Formatted data presentation
-- **python-dotenv** - Environment configuration management
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![CLI](https://img.shields.io/badge/CLI-Terminal%20Interface-black?style=for-the-badge&logo=windows-terminal)
 
-### Development & Deployment
-- **Git** - Version control
-- **GitHub** - Repository hosting and collaboration
-- **Modular Architecture** - Separation of concerns and maintainability
+### Development Tools
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![VSCode](https://img.shields.io/badge/Visual%20Studio%20Code-0078d4.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+</div>
+
+**🗄️ Database Layer:**
+- **MySQL 8.0+** - Primary relational database engine with advanced features
+- **SQL DDL/DML** - Comprehensive schema definition and data manipulation
+- **Stored Procedures** - Complex transactional business logic implementation
+- **Database Triggers** - Automated business rule enforcement and data validation
+- **Optimized Views** - High-performance reporting and data aggregation
+- **Advanced Constraints** - Data integrity through foreign keys and check constraints
+
+**🐍 Application Layer:**
+- **Python 3.8+** - Core application development language
+- **mysql-connector-python** - Robust database connectivity and transaction management
+- **tabulate** - Professional formatted data presentation and reporting
+- **python-dotenv** - Secure environment configuration management
+
+**🔧 Development & Architecture:**
+- **Git Version Control** - Professional development workflow and collaboration
+- **GitHub Integration** - Repository hosting with comprehensive documentation
+- **Modular Architecture** - Clean separation of concerns and maintainable codebase
+- **Security Best Practices** - Credential protection and parameterized queries
+
+## 📚 Implementation Plan
+
+<div align="center">
+
+![Implementation](https://img.shields.io/badge/STATUS-100%25%20COMPLETE-brightgreen?style=for-the-badge)
+
+</div>
+
+This project follows a comprehensive implementation strategy based on the **CSC540 Part 2 Implementation Plan**, ensuring a robust and scalable database application:
+
+### 🏗️ **Database Layer Implementation**
+
+**📋 DDL Schema (`01_schema_and_logic.sql`)**
+- **18 Normalized Tables** with complete referential integrity
+- **Unique Constraints** ensuring manufacturer-scoped product IDs and lot numbers  
+- **Advanced Check Constraints** for positive quantities, costs, and business rules
+- **Non-overlapping Formulations** enforced through triggers and procedures
+
+**⚡ Automated Business Logic**
+- **🔧 5 Database Triggers** implementing:
+  - Automatic lot number generation with format validation
+  - Expiration date enforcement (90-day minimum policy)
+  - Real-time inventory maintenance on consumption and receipt
+  - Prevention of expired ingredient consumption
+
+**⚙️ Stored Procedures**
+- **`sp_record_product_batch(...)`** - Complete transactional batch processing
+  - Validates ownership, quantities, expiration dates, and ingredient availability
+  - Implements FEFO (First Expired, First Out) consumption strategy
+  - Enforces regulatory "do-not-combine" rules at database level
+  - Calculates batch costs and unit costs with full traceability
+
+### 🐍 **Application Layer Architecture**
+
+**🎯 Role-Based Menu System**
+- **Manufacturer Interface** - Production control and inventory management
+- **Supplier Interface** - Ingredient management and batch receiving  
+- **Viewer Interface** - Analytics and regulatory compliance monitoring
+
+**🔒 Security & Data Integrity**
+- **Parameterized Queries** preventing SQL injection attacks
+- **Role-based Access Control** with ownership validation
+- **Transactional Processing** ensuring data consistency
+- **Input Validation** with friendly error messaging
+
+**📊 Advanced Features**
+- **Staging Tables** for complex multi-lot ingredient selection
+- **FEFO Optimization** with automated lot selection procedures  
+- **Real-time Reporting** through optimized database views
+- **Cost Analysis** with dynamic unit cost calculation
+
+### 🎯 **Demonstration Workflows**
+
+**🔄 Complete Business Process Flow:**
+1. **Supplier Operations** - Receive ingredient batches (triggers lot number generation)
+2. **Recipe Management** - Create versioned product formulations  
+3. **Production Execution** - Automated batch creation with FEFO consumption
+4. **Compliance Monitoring** - Real-time reporting and regulatory checking
+5. **Analytics & Insights** - Cost analysis and performance metrics
 
 ## 🤝 Contributing
 
-### Setup for Development
+<div align="center">
 
-1. **Fork the repository** on GitHub
-2. **Clone your fork** locally
-3. **Create a feature branch**: `git checkout -b feature/amazing-feature`  
-4. **Make your changes** and test thoroughly
-5. **Commit your changes**: `git commit -m 'Add amazing feature'`
-6. **Push to your branch**: `git push origin feature/amazing-feature`
-7. **Open a Pull Request** with detailed description
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)
+![Issues](https://img.shields.io/badge/issues-welcome-blue.svg?style=for-the-badge)
 
-### Development Guidelines
+</div>
 
-- Follow existing code style and structure
-- Add appropriate comments for complex logic
-- Test all database operations thoroughly  
-- Update documentation for any schema changes
-- Ensure security best practices (no hardcoded credentials)
+### 🚀 **Getting Started with Development**
 
-### Database Changes
+```bash
+# 🍴 1. Fork the repository on GitHub
+# 📥 2. Clone your fork locally
+git clone https://github.com/YOUR_USERNAME/Food-Manufacturing-Inventory-Management-System.git
 
-- Always test schema changes with sample data
-- Document any new triggers, procedures, or constraints
+# 🌿 3. Create a feature branch
+git checkout -b feature/amazing-new-feature
+
+# 💻 4. Make your changes and test thoroughly
+# ✅ 5. Commit with descriptive messages
+git commit -m 'feat: Add amazing new feature with comprehensive tests'
+
+# 🚀 6. Push to your branch
+git push origin feature/amazing-new-feature
+
+# 🔄 7. Open a Pull Request with detailed description
+```
+
+### 📋 **Development Guidelines**
+
+**🎯 Code Standards:**
+- Follow existing code style and architectural patterns
+- Add comprehensive comments for complex business logic
+- Implement thorough testing for all database operations
 - Maintain backwards compatibility when possible
-- Update seed data if new tables are added
+- Follow security best practices (no hardcoded credentials)
+
+**🗄️ Database Changes:**
+- Test schema modifications with representative sample data
+- Document new triggers, procedures, and constraints thoroughly  
+- Update seed data files when adding new tables or relationships
+- Validate foreign key relationships and constraint enforcement
+
+**📝 Documentation:**
+- Update README.md for any new features or configuration changes
+- Add inline code comments for complex algorithms
+- Document API changes and new stored procedure parameters
+- Include example usage for new functionality
+
+### 🎯 **Contribution Opportunities**
+
+- **🔧 Feature Enhancements** - Additional reporting views or analytics capabilities
+- **🛡️ Security Improvements** - Enhanced authentication or audit logging  
+- **📊 Performance Optimization** - Query optimization or indexing strategies
+- **🧪 Testing Framework** - Automated testing suite for database procedures
+- **📚 Documentation** - Enhanced user guides or API documentation
+- **🐛 Bug Fixes** - Issues with existing functionality or edge cases
 
 ---
 
-## 📄 License
+## 📞 Contact
 
-This project is part of an academic coursework for Database Management Systems. Please respect academic integrity guidelines when referencing or building upon this work.
+<div align="center">
 
-## 🙋‍♀️ Support
+### 👨‍💻 **Project Developer**
 
-For questions about this project:
-- Check the comprehensive documentation in `/DBMS_final/docs/`
-- Review the testing guide in `/DBMS_final/TESTING_GUIDE.md`
-- Examine the implementation roadmap for feature details
+**Rahil Shukla**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rahil312)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rahil-shukla)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rshukla7@ncsu.edu)
+
+**🎓 Academic Information:**
+- **Institution:** North Carolina State University
+- **Program:** Computer Science Graduate Program
+- **Course:** CSC540 - Database Management Systems
+- **Semester:** Fall 2025
+
+</div>
+
+### 📬 **Get in Touch**
+
+**💬 For Questions About This Project:**
+- 📚 Check the comprehensive documentation in [`/DBMS_final/docs/`](./DBMS_final/docs/)
+- 🧪 Review the testing guide in [`/DBMS_final/TESTING_GUIDE.md`](./DBMS_final/TESTING_GUIDE.md)
+- 📋 Examine the implementation roadmap for detailed feature specifications
+- 🐛 Open an [Issue](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/issues) for bug reports or feature requests
+
+**🤝 For Collaboration Opportunities:**
+- 💼 **Industry Professionals** - Discussion about real-world database implementations
+- 🎓 **Academic Researchers** - Collaboration on advanced DBMS concepts and optimizations  
+- 👨‍💻 **Fellow Developers** - Code review, architectural improvements, or feature extensions
+- 🏢 **Employers** - Technical discussions about database design and development skills
+
+**📧 Direct Contact:**
+- **Primary Email:** [rshukla7@ncsu.edu](mailto:rshukla7@ncsu.edu)
+- **Response Time:** Within 24-48 hours for technical inquiries
+- **Best for:** Project-specific questions, collaboration proposals, technical discussions
 
 ---
 
-**⭐ If you found this project helpful, please consider giving it a star!**
+<div align="center">
+
+## 📄 **License & Academic Integrity**
+
+![License](https://img.shields.io/badge/License-Academic%20Use-blue?style=for-the-badge)
+
+This project is part of academic coursework for Database Management Systems (CSC540). 
+
+**Please respect academic integrity guidelines when referencing or building upon this work.**
+
+---
+
+### ⭐ **Show Your Support**
+
+**If you found this project helpful or impressive, please consider:**
+
+[![GitHub stars](https://img.shields.io/github/stars/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Rahil312/Food-Manufacturing-Inventory-Management-System?style=social)](https://github.com/Rahil312/Food-Manufacturing-Inventory-Management-System/network/members)
+
+**🌟 Starring the repository** • **🍴 Forking for your own projects** • **🐛 Reporting issues** • **💡 Suggesting improvements**
+
+*Your support helps demonstrate the real-world impact of academic database projects!*
+
+</div>
 
 ### 3. Advanced Reporting & Analytics
 - Real-time inventory monitoring with consumption tracking
