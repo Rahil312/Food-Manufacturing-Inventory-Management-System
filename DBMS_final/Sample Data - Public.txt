@@ -1,0 +1,276 @@
+﻿DATABASE PROJECT: SAMPLE DATA
+Table: Category
+category_id
+	name
+	2
+	Dinners
+	3
+	Sides
+	
+
+Table: Product
+product_id
+	product_number
+	name
+	category_id
+	standard_batch_units
+	100
+	P-100
+	Steak Dinner
+	2
+	500
+	101
+	P-101
+	Mac & Cheese
+	3
+	300
+	
+
+Table: Ingredient
+ingredient_id
+	common_name
+	type
+	101
+	Salt
+	ATOMIC
+	102
+	Pepper
+	ATOMIC
+	104
+	Sodium Phosphate
+	ATOMIC
+	106
+	Beef Steak
+	ATOMIC
+	108
+	Pasta
+	ATOMIC
+	201
+	Seasoning Blend
+	COMPOUND
+	301
+	Super Seasoning
+	COMPOUND
+	
+
+
+
+
+
+
+
+
+
+Table: Supplier
+supplier_id
+	name
+	20
+	Jane Doe
+	21
+	James Miller
+	
+
+Table: IngredientFormulation
+formulation_id
+	ingredient_id
+	supplier_id
+	version_no
+	effective_start
+	effective_end
+	price_per_pack
+	pack_size
+	1
+	201
+	20
+	1
+	2025-01-01
+	2025-06-30
+	20.0
+	8.0
+	
+
+Table: FormulationMaterials
+formulation_id
+	ingredient_id
+	qty
+	1
+	101
+	6.0
+	1
+	102
+	2.0
+	
+
+Table: ProductBOM
+product_id
+	ingredient_id
+	qty
+	100
+	106
+	6.0
+	100
+	201
+	0.2
+	101
+	108
+	7.0
+	101
+	101
+	0.5
+	101
+	102
+	2.0
+	
+
+
+
+
+
+
+
+Table: User
+user_id
+	first_name
+	last_name
+	role_code
+	MFG001
+	John
+	Smith
+	MANUFACTURER
+	MFG002
+	Alice
+	Lee
+	MANUFACTURER
+	SUP020
+	Jane
+	Doe
+	SUPPLIER
+	SUP021
+	James
+	Miller
+	SUPPLIER
+	VIEW001
+	Bob
+	Johnson
+	VIEWER
+	
+
+Table: IngredientBatch 
+lot_number
+	ingredient_id
+	supplier_id
+	quantity
+	unit_cost
+	expiration_date
+	101-20-B0001
+	101
+	20
+	1000
+	0.1
+	2025-11-15
+	101-21-B0001
+	101
+	21
+	800
+	0.08
+	2025-10-30
+	101-20-B0002
+	101
+	20
+	500
+	0.1
+	2025-11-01
+	101-20-B0003
+	101
+	20
+	500
+	0.1
+	2025-12-15
+	102-20-B0001
+	102
+	20
+	1200
+	0.3
+	2025-12-15
+	106-20-B0005
+	106
+	20
+	3000
+	0.5
+	2025-12-15
+	106-20-B0006
+	106
+	20
+	600
+	0.5
+	2025-12-20
+	108-20-B0001
+	108
+	20
+	1000
+	0.25
+	2025-09-28
+	108-20-B0003
+	108
+	20
+	6300
+	0.25
+	2025-12-31
+	201-20-B0001
+	201
+	20
+	100
+	2.5
+	2025-11-30
+	201-20-B0002
+	201
+	20
+	20
+	2.5
+	2025-12-30
+	
+
+Table: ProductBatch 
+lot_number
+	product_id
+	produced_qty
+	produced_at
+	expiration_date
+	100-MFG001-B0901
+	100
+	100
+	2025-09-26
+	2025-11-15
+	101-MFG002-B0101
+	101
+	300
+	2025-09-10
+	2025-10-30
+	Table: ProductionConsumption 
+product_batch
+	ingredient_lot
+	qty
+	100-MFG001-B0901
+	106-20-B0006
+	600
+	100-MFG001-B0901
+	201-20-B0002
+	20
+	101-MFG002-B0101
+	101-20-B0002
+	150
+	101-MFG002-B0101
+	108-20-B0003
+	2100
+	101-MFG002-B0101
+	102-20-B0001
+	600
+	
+
+Table: ConflictPairs 
+ingredient_a
+	ingredient_b
+	201
+	104
+	106
+	104
